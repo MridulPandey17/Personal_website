@@ -3,49 +3,147 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import HorizontalCard from "../components/HorizontalCard.astro";
 ---
 
-<BaseLayout title = "Projects" sideBarActiveItemID="projects">
+<BaseLayout title="Projects" sideBarActiveItemID="projects">
   <div>
-    <div class="text-3xl w-full font-bold mb-5">Projects Header</div>
+    <div class="text-3xl w-full font-bold mb-5">Research Projects</div>
   </div>
 
-  <HorizontalCard
-    title="Demo Project 1"
-    img="/post_img.webp"
-    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    url="#"
-    badge="NEW"
-  />
-  <div class="divider my-0"></div>
-  <HorizontalCard
-    title="Demo Project 2"
-    img="/post_img.webp"
-    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    url="#"
-  />
+  <!-- Project 1 -->
+  <div class="horizontal-card-wrapper hover:bg-gray-100 p-4 rounded-md transition duration-300">
+    <HorizontalCard
+      title="Automated Speech Recognition (ASR) for Indic Language"
+      img="/post_img.webp"
+      desc=""
+      url="#"
+    />
+    <div class="flex gap-4 mt-2">
+      <a
+        href="/static/asr-indic-language-report.pdf"
+        target="_blank"
+        class="btn report-btn"
+      >
+        📄 Report
+      </a>
+      <a
+        href="https://github.com/your-username/asr-indic-language"
+        target="_blank"
+        class="btn github-btn"
+      >
+        <img src="/static/github-logo.svg" alt="GitHub" class="icon mr-2" />
+        GitHub
+      </a>
+    </div>
+    <p class="mt-2 text-gray-600">
+      <ul style="list-style-type: disc; display: flex; padding-left: 20px;">
+  <li style="margin-right: 30px;">ASR</li>
+  <li style="margin-right: 30px;">Indic Languages</li>
+   <li style="margin-right: 30px;">Confermers</li>
+   <li style="margin-right: 30px;">Wave2vec</li>
+   <li style="margin-right: 30px;">Active Learning</li>
+   <li style="margin-right: 30px;">Domain Adaptation</li>
+   <br>
+   </ul>
+   <ul style="list-style-type: disc; display: flex; padding-left: 20px;">
+  
+  <li style="margin-right: 30px;">Signal Processing</li>
+  <li>FFTs</li>
+</ul>
 
-  <div>
-    <div class="text-3xl w-full font-bold mb-5 mt-10">Projects Header</div>
+    </p>
   </div>
 
-  <HorizontalCard
-    title="Demo Project 3"
-    img="/post_img.webp"
-    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    url="#"
-    badge="FOSS"
-  />
-  <div class="divider my-0"></div>
-  <HorizontalCard
-    title="Demo Project 4"
-    img="/post_img.webp"
-    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    url="#"
-  />
-  <div class="divider my-0"></div>
-  <HorizontalCard
-    title="Demo Project 5"
-    img="/post_img.webp"
-    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    url="#"
-  />
+  <div class="divider my-4"></div>
+
+  <!-- Project 2 -->
+  <div class="horizontal-card-wrapper hover:bg-gray-100 p-4 rounded-md transition duration-300">
+    <HorizontalCard
+      title="Demo Project 2"
+      img="/post_img.webp"
+      desc=""
+      url="#"
+    />
+    <div class="flex gap-4 mt-2">
+      <a
+        href="/static/demo-project-2-report.pdf"
+        target="_blank"
+        class="btn report-btn"
+      >
+        📄 Report
+      </a>
+      <a
+        href="https://github.com/your-username/demo-project-2"
+        target="_blank"
+        class="btn github-btn"
+      >
+        <img src="/static/github-logo.svg" alt="GitHub" class="icon mr-2" />
+        GitHub
+      </a>
+    </div>
+    <p class="mt-2 text-gray-600">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    </p>
+  </div>
+
+  <div class="divider my-4"></div>
+
+  <!-- Add additional projects below in the same format -->
+  <div class="horizontal-card-wrapper hover:bg-gray-100 p-4 rounded-md transition duration-300">
+    <HorizontalCard
+      title="Demo Project 3"
+      img="/post_img.webp"
+      desc=""
+      url="#"
+    />
+    <div class="flex gap-4 mt-2">
+      <a
+        href="/static/demo-project-3-report.pdf"
+        target="_blank"
+        class="btn report-btn"
+      >
+        📄 Report
+      </a>
+      <a
+        href="https://github.com/your-username/demo-project-3"
+        target="_blank"
+        class="btn github-btn"
+      >
+        <img src="/static/github-logo.svg" alt="GitHub" class="icon mr-2" />
+        GitHub
+      </a>
+    </div>
+    <p class="mt-2 text-gray-600">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    </p>
+  </div>
+
+  <div class="divider my-4"></div>
+
+  <div class="horizontal-card-wrapper hover:bg-gray-100 p-4 rounded-md transition duration-300">
+    <HorizontalCard
+      title="Demo Project 4"
+      img="/post_img.webp"
+      desc=""
+      url="#"
+    />
+    <div class="flex gap-4 mt-2">
+      <a
+        href="/static/demo-project-4-report.pdf"
+        target="_blank"
+        class="btn report-btn"
+      >
+        📄 Report
+      </a>
+      <a
+        href="https://github.com/your-username/demo-project-4"
+        target="_blank"
+        class="btn github-btn"
+      >
+        <img src="/static/github-logo.svg" alt="GitHub" class="icon mr-2" />
+        GitHub
+      </a>
+    </div>
+    <p class="mt-2 text-gray-600">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    </p>
+  </div>
 </BaseLayout>
