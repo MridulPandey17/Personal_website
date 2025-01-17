@@ -2,6 +2,7 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import HorizontalCard from "../components/HorizontalCard.astro";
 ---
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
 <BaseLayout title="Projects" sideBarActiveItemID="projects">
   <div>
@@ -9,141 +10,249 @@ import HorizontalCard from "../components/HorizontalCard.astro";
   </div>
 
   <!-- Project 1 -->
+  <!-- Project 1 -->
+<div class="horizontal-card-wrapper hover:bg-gray-100 p-4 rounded-md transition duration-300">
+  <HorizontalCard
+    title="Automated Speech Recognition for Indic Language"
+    img="/post_img.webp"
+    desc="Madhav Labs, IIT Kanpur"
+    url="#"
+  />
+  
+  <div class="flex gap-4 mt-2 ml-4">
+    <a
+  href="/projects/reports/ASR_INDIC_Report"
+  class="btn report-btn"
+>
+      📄 Report
+    </a>
+    <a
+      href="https://github.com/MridulPandey17/ASR_INDIC"
+      target="_blank"
+      class="btn github-btn"
+    >
+      <i class="fab fa-github"></i>
+      GitHub
+    </a>
+  </div>
+
+  <p class="mt-2 text-gray-600">
+    <ul style="list-style-type: disc; display: flex; padding-left: 30px; margin-bottom: 10px;">
+      <li style="margin-right: 30px;">Conformers</li>
+      <li style="margin-right: 30px;">Wave2Vec</li>
+      <li style="margin-right: 30px;">Domain Adaptation</li>
+      <li style="margin-right: 30px;">Active Learning</li>
+      <li style="margin-right: 30px;">Signal Processing</li>
+      <li>FTTs</li>
+    </ul>
+  </p>
+</div>
+
+  <!--
   <div class="horizontal-card-wrapper hover:bg-gray-100 p-4 rounded-md transition duration-300">
     <HorizontalCard
-      title="Automated Speech Recognition (ASR) for Indic Language"
+      title="Automated Speech Recognition for Indic Language"
       img="/post_img.webp"
-      desc=""
+      desc="Madhav Labs, IIT Kanpur"
       url="#"
     />
-    <div class="flex gap-4 mt-2">
-      <a
-        href="/static/asr-indic-language-report.pdf"
-        target="_blank"
-        class="btn report-btn"
-      >
-        📄 Report
-      </a>
-      <a
-        href="https://github.com/your-username/asr-indic-language"
-        target="_blank"
-        class="btn github-btn"
-      >
-        <img src="/static/github-logo.svg" alt="GitHub" class="icon mr-2" />
-        GitHub
-      </a>
-    </div>
+    <div class="flex gap-4 mt-2 ml-4">
+  <a
+    href="/projects/demo-project-2"
+    target="_blank"
+    class="btn report-btn"
+  >
+    📄 Report
+  </a>
+  <a
+    href="https://github.com/MridulPandey17/ASR_INDIC"
+    target="_blank"
+    class="btn github-btn"
+  >
+    <i class="fab fa-github"></i>
+    GitHub
+  </a>
+</div>
+
     <p class="mt-2 text-gray-600">
-      <ul style="list-style-type: disc; display: flex; padding-left: 20px;">
-  <li style="margin-right: 30px;">ASR</li>
-  <li style="margin-right: 30px;">Indic Languages</li>
-   <li style="margin-right: 30px;">Confermers</li>
-   <li style="margin-right: 30px;">Wave2vec</li>
-   <li style="margin-right: 30px;">Active Learning</li>
-   <li style="margin-right: 30px;">Domain Adaptation</li>
-   <br>
-   </ul>
-   <ul style="list-style-type: disc; display: flex; padding-left: 20px;">
-  
+      <ul style="list-style-type: disc; display: flex; padding-left: 30px; margin-bottom: 10px;">
+  <li style="margin-right: 30px;">Conformers</li>
+  <li style="margin-right: 30px;">Wave2Vec</li>
+  <li style="margin-right: 30px;">Domain Adaptation</li>
+  <li style="margin-right: 30px;">Active Learning</li>
   <li style="margin-right: 30px;">Signal Processing</li>
-  <li>FFTs</li>
+  <li>FTTs</li>
 </ul>
 
     </p>
-  </div>
+  </div> -->
 
   <div class="divider my-4"></div>
 
   <!-- Project 2 -->
-  <div class="horizontal-card-wrapper hover:bg-gray-100 p-4 rounded-md transition duration-300">
-    <HorizontalCard
-      title="Demo Project 2"
-      img="/post_img.webp"
-      desc=""
-      url="#"
-    />
-    <div class="flex gap-4 mt-2">
-      <a
-        href="/static/demo-project-2-report.pdf"
-        target="_blank"
-        class="btn report-btn"
-      >
-        📄 Report
-      </a>
-      <a
-        href="https://github.com/your-username/demo-project-2"
-        target="_blank"
-        class="btn github-btn"
-      >
-        <img src="/static/github-logo.svg" alt="GitHub" class="icon mr-2" />
-        GitHub
-      </a>
-    </div>
-    <p class="mt-2 text-gray-600">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-    </p>
+<div class="horizontal-card-wrapper hover:bg-gray-100 p-4 rounded-md transition duration-300">
+  <HorizontalCard
+    title="Poverty Estimation in Haryana using Open Source Data"
+    img="/post_img.webp"
+    desc="Center for Developing Intelligent Systems, IITK"
+    url="#"
+  />
+  
+  <div class="flex gap-4 mt-2 ml-4">
+    <a
+  href="/projects/reports/CDIS"
+  class="btn report-btn"
+>
+      📄 Report
+    </a>
+    <a
+      href="https://github.com/Divyanshsingh1910/CDIS_Satellite_Imagery_Analysis"
+      target="_blank"
+      class="btn github-btn"
+    >
+      <i class="fab fa-github"></i>
+      GitHub
+    </a>
   </div>
+
+  <p class="mt-2 text-gray-600">
+    <ul style="list-style-type: disc; display: flex; padding-left: 30px; margin-bottom: 10px;">
+      <li style="margin-right: 30px;">Satellite Images</li>
+      <li style="margin-right: 30px;">OSM</li>
+      <li style="margin-right: 30px;">Deep Features</li>
+      <li style="margin-right: 30px;">Domain Adaptation</li>
+      <li style="margin-right: 30px;">Regression Models</li>
+      <li>Explainable AI</li>
+    </ul>
+  </p>
+</div>
 
   <div class="divider my-4"></div>
 
-  <!-- Add additional projects below in the same format -->
+  <!-- Project 3 -->
   <div class="horizontal-card-wrapper hover:bg-gray-100 p-4 rounded-md transition duration-300">
-    <HorizontalCard
-      title="Demo Project 3"
-      img="/post_img.webp"
-      desc=""
-      url="#"
-    />
-    <div class="flex gap-4 mt-2">
-      <a
-        href="/static/demo-project-3-report.pdf"
-        target="_blank"
-        class="btn report-btn"
-      >
-        📄 Report
-      </a>
-      <a
-        href="https://github.com/your-username/demo-project-3"
-        target="_blank"
-        class="btn github-btn"
-      >
-        <img src="/static/github-logo.svg" alt="GitHub" class="icon mr-2" />
-        GitHub
-      </a>
-    </div>
-    <p class="mt-2 text-gray-600">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-    </p>
+  <HorizontalCard
+    title="Low Cost PM2.5 Sensor Network Calibration"
+    img="/post_img.webp"
+    desc="National Aerosol Facility, IITK"
+    url="#"
+  />
+  
+  <div class="flex gap-4 mt-2 ml-4">
+    <a
+  href="/projects/reports/sensorcalibration"
+  class="btn report-btn"
+>
+      📄 Report
+    </a>
+    <a
+      href="https://github.com/MridulPandey17/AirQualitySensorCalibration"
+      target="_blank"
+      class="btn github-btn"
+    >
+      <i class="fab fa-github"></i>
+      GitHub
+    </a>
   </div>
+
+  <p class="mt-2 text-gray-600">
+    <ul style="list-style-type: disc; display: flex; padding-left: 30px; margin-bottom: 10px;">
+      <li style="margin-right: 30px;">Self Supervised Learning</li>
+      <li style="margin-right: 30px;">Sensor Network</li>
+      <li style="margin-right: 30px;">Regression</li>
+      <li style="margin-right: 30px;">Spatial Learning</li>
+
+      <li>FIGMA</li>
+    </ul>
+  </p>
+</div>
+
 
   <div class="divider my-4"></div>
 
+  <!-- Project 4 -->
   <div class="horizontal-card-wrapper hover:bg-gray-100 p-4 rounded-md transition duration-300">
-    <HorizontalCard
-      title="Demo Project 4"
-      img="/post_img.webp"
-      desc=""
-      url="#"
-    />
-    <div class="flex gap-4 mt-2">
-      <a
-        href="/static/demo-project-4-report.pdf"
-        target="_blank"
-        class="btn report-btn"
-      >
-        📄 Report
-      </a>
-      <a
-        href="https://github.com/your-username/demo-project-4"
-        target="_blank"
-        class="btn github-btn"
-      >
-        <img src="/static/github-logo.svg" alt="GitHub" class="icon mr-2" />
-        GitHub
-      </a>
-    </div>
-    <p class="mt-2 text-gray-600">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-    </p>
+  <HorizontalCard
+    title="Failure Forecasting in Low Cost PM2.5 Sensors"
+    img="/post_img.webp"
+    desc="National Aerosol Facility, IITK"
+    url="#"
+  />
+  
+  <div class="flex gap-4 mt-2 ml-4">
+    <a
+  href="/projects/reports/failureforecast"
+  class="btn report-btn"
+>
+      📄 Report
+    </a>
+    <a
+      href="https://github.com/MridulPandey17/AQI_Failure_Forecasting"
+      target="_blank"
+      class="btn github-btn"
+    >
+      <i class="fab fa-github"></i>
+      GitHub
+    </a>
   </div>
+
+  <p class="mt-2 text-gray-600">
+    <ul style="list-style-type: disc; display: flex; padding-left: 30px; margin-bottom: 10px;">
+      <li style="margin-right: 30px;">Deep Time Series Forecasting</li>
+      
+      <li style="margin-right: 30px;">Wavenets</li>
+      <li style="margin-right: 30px;">Sequence2sequence</li>
+      <li style="margin-right: 30px;">LSTM</li>
+
+      <li>GRU</li>
+    </ul>
+  </p>
+</div>
+
+  <div>
+    <div class="text-3xl w-full font-bold mb-5">Industrial Projects</div>
+  </div>
+
+  <!-- Project 1 -->
+  <!-- Project 1 -->
+<div class="horizontal-card-wrapper hover:bg-gray-100 p-4 rounded-md transition duration-300">
+  <HorizontalCard
+    title="Automating nurse-patient interaction using Generative AI"
+    img="/post_img.webp"
+    desc="Noora Health Carer"
+    url="#"
+  />
+  
+  <div class="flex gap-4 mt-2 ml-4">
+    <a
+  href="/projects/reports/noora"
+  class="btn report-btn"
+>
+      📄 Report
+    </a>
+    <a
+      href="https://github.com/Mudiit4/Noora_Health_handwriting_recognition"
+      target="_blank"
+      class="btn github-btn"
+    >
+      <i class="fab fa-github"></i>
+      GitHub
+    </a>
+  </div>
+
+  <p class="mt-2 text-gray-600">
+    <ul style="list-style-type: disc; display: flex; padding-left: 30px; margin-bottom: 10px;">
+      <li style="margin-right: 30px;">OCR</li>
+      <li style="margin-right: 30px;">LLM</li>
+      <li style="margin-right: 30px;">Few shot Learning</li>
+      <li style="margin-right: 30px;">Chain of Thoughts</li>
+      <li style="margin-right: 30px;">Agentic RAG</li>
+      <li style="margin-right: 30px;">Graph RAG</li>
+      
+      <li>Vector Rag</li>
+    </ul>
+  </p>
+</div>
+
+  
 </BaseLayout>
