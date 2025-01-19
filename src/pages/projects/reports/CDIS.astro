@@ -1,14 +1,65 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
 ---
-
+<style>
+    ol {
+        list-style: decimal; /* Ensure default numbering */
+        padding-left: 40px; /* Add space from the left */
+    }
+</style>
 <BaseLayout title="ASR Indic Report">
   <div class="project-report">
-    <h1>Automated Speech Recognition for Indic Language</h1>
+  <div style="text-align: center;">
+    <h1> <b>Poverty Estimation in Haryana using Open Source Data  </b></h1>
     <p>
-      Project description and detailed report goes here.
+      <!-- Project description and detailed report goes here.-->
     </p>
-    <h2>Contributors</h2>
-    <p>Madhav Labs, IIT Kanpur</p>
+    <a href="https://www.iitk.ac.in/cdis/" style="text-decoration: underline;"><h2>Center for Developing Intelligent Systems</h2></a>
+    </div>
+    <h2><u>Professor in charge:</u> Prof. Nisheeth Srivastava<br>
+    <u>Timeline:</u> August 2023-April 2024 </h2>
+    <br>
+    <p>
+    <h2><b>Brief Description</b></h2>
+    The project aimed at predicting the income level of each household in Haryana. The main aim of this
+    project was to identify the people in need of government upliftment skills, while at the same time 
+    catch the people taking falsely claiming government's monetary compensations by reporting false incomes.
+    We leveraged various open source data available for Haryana like Satellite images, Night Time Light Data,
+    Open Street Map(OSM) data, plot sizes data to predict the income level of a subdistrict at first, followed 
+    by more estimates of incomes levels per household.
+    <br><br>
+    We obtained R2 score of 0.88 for subdistrict level income predictions, while getting an F1 score of 0.65 
+    for predicting whether a household is above or below poverty line. We leveraged many image segmentation methods
+    like fast RCNN to segment the roofs and roads from satellite images, to find correlation between nature of roofs and 
+    roads with income levels.
+  <br>
+     <h2><b>Technical Details</b></h2>
+     <ol>
+     <li><u>Sub-district Level Model:</u><br>
+     The first part of the project involved predicting average income levels at sub district level. The true 
+     data for RWI throughout has been prepared by facebook. For predicting this sub-district level RWI,we took
+     inspiration from a research carried out in Bangladesh to predict poverty using Satellite images. We extracted satellite 
+     images for Haryana using MapBox API and obtained deep features for each image by feeding them into pre-trained 
+     VGG-16 and RenNet50V2 models. <br>
+     Along with the above data, NTL data and OSM features were extracted for Haryana using QGIS software. These features include
+     nearby hospitals, schools, banks, roads, etc. The satellite images deep features, OSM data and NTL data
+     together constituted the training data to train the regression models, obtaining an R2 score of 0.88 using Random Forest Regressor.
+     <br><br>
+     </li>
+     <li><u>Household Level Model:</u><br>
+     To further increase the granularity of predictions to the household level, more local features were incorporated to the model along with
+     the base global model. The satellite images were segmented using Fast RCNN to obtain the houseroofs and roads. These were then used as input parameters for predicting the 
+     household level incomes. Along with this plot size data was used to predict if a household is below or above poverty line using various classification methods. 
+     Finally a F1 score of 0.65 was obtained using Catboost.
+
+     <br>
+     
+     Considering the importance of expandability of our predictions, we used various explainable models like Shapash, to understand the feature importance
+     and their correlation with income levels. 
+     </li>
+     </ol>
+  
+
+    </p>
   </div>
 </BaseLayout>

@@ -1,14 +1,47 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
 ---
-
-<BaseLayout title="ASR Indic Report">
+<style>
+    ol {
+        list-style: decimal; /* Ensure default numbering */
+        padding-left: 40px; /* Add space from the left */
+    }
+</style>
+<BaseLayout title="Automating Nurse Patient Interactions using GenAI">
   <div class="project-report">
-    <h1>Automated Speech Recognition for Indic Language</h1>
+  <div style="text-align: center;">
+    <h1> <b>Automating Nurse Patient Interactions using GenAI</b></h1>
     <p>
-      Project description and detailed report goes here.
+      <!-- Project description and detailed report goes here.-->
     </p>
-    <h2>Contributors</h2>
-    <p>Madhav Labs, IIT Kanpur</p>
+    <a href="https://noorahealth.org/" style="text-decoration: underline;"><h2>Noora Health Care</h2></a>
+    </div>
+    <u>Timeline:</u> May 2023-Jan 2025 </h2>
+    <br>
+    <p>
+    <h2><b>Brief Description</b></h2>
+    The project was aimed at digitalizing handwritten nurse reports and creating Retrieval Augmentation Model(RAG), to answer patients medical queries
+    over whatsapp in multiple languages. 
+
+  <br>
+     <h2><b>Technical Details</b></h2>
+     <ol>
+      <br>
+     <li><u>Document OCR:</u><br>
+     The nurse reports were structured and alphanumeric (English) in nature. To leverage this structured format, Google Cloud’s 
+    form parser was used to extract the data in table format from the handwritten sheets. This approach resulted in an accuracy of around 70%. This was further 
+    improved by adding few-shot and chain of thoughts to are model resulting in  85% accuracy on poor and semi-structured images.
+     <br><br>
+     </li>
+     <li><u>Query Retrieval Model:</u><br>
+     To create a multilingual RAG model answering patient queries, we used a rich patient query response dataset in multiple language (22 languages). 
+     To translate the queries we used GPT 4. The RAG model was implemented using OpenAI, and a comparative analysis was made between Vector RAG and
+     Graph RAG. 
+     </li>
+     </ol>
+
+  
+
+    </p>
   </div>
 </BaseLayout>

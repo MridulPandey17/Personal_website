@@ -1,14 +1,55 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
 ---
-
-<BaseLayout title="ASR Indic Report">
+<style>
+    ol {
+        list-style: decimal; /* Ensure default numbering */
+        padding-left: 40px; /* Add space from the left */
+    }
+</style>
+<BaseLayout title="Low Cost PM2.5 Sensor Network Calibration">
   <div class="project-report">
-    <h1>Automated Speech Recognition for Indic Language</h1>
+  <div style="text-align: center;">
+    <h1> <b>Low Cost PM2.5 Sensor Network Calibration  </b></h1>
     <p>
-      Project description and detailed report goes here.
+      <!-- Project description and detailed report goes here.-->
     </p>
-    <h2>Contributors</h2>
-    <p>Madhav Labs, IIT Kanpur</p>
+    <a href="https://home.iitk.ac.in/~snt/naf/index.html" style="text-decoration: underline;"><h2>National Aerosol Facility</h2></a>
+    </div>
+    <h2><u>Professor in charge:</u> Prof. Vipul Arora, Prof. S. N. Tripathi<br>
+    <u>Timeline:</u> May 2023-Jan 2025 </h2>
+    <br>
+    <p>
+    <h2><b>Brief Description</b></h2>
+    The project aimed at calibrating Low cost PM 2.5 sensors using a novel self supervised learning method. The paper for the same has been submitted 
+    to IEEE sensor letters. <br> Across Bihar and Uttar Pradesh several low cost PM 2.5 sensors(LCS) have been installed to improve the local air 
+    quality monitoring. But these LCS require constant calibration, which is a cumbersome process due to the lack of colocated high cost sensors(HCS).
+    <br>This poses a serious problem on the validity of LCS in providing reliable PM2.5 readings. Therefore to navigate this problem, in this project 
+    we worked on a self supervised learning algorithm to provide reliable estimates of PM2.5 anywhere in the sensor network using very little 
+    true HCS data.  
+
+  <br>
+     <h2><b>Technical Details</b></h2>
+     <ol>
+     The dataset contains PM2.5, RH and temperature readings for 247 LCS and 4 HCS, for 510 time frames. The 4 HCS are located far away fom each other and are not collocated with any HCS.
+      <br>
+     <li><u>Self-Supervised Learning:</u><br>
+     The LCS data being widespread is used for learning the geographic Variations of PM2.5. A novel approach in self supervised learning has been used used to learn this
+     geographical variation. Each LCS data time series is predicted by its nearest 10 LCS. Thereby allowing the model to learn the spread and variation of PM2.5 
+     across the sensor networks. Many regression models have been used to implement the above approach, with Deep Neural Networks(DNN), Gaussian 
+     Process Regression(GPR) and Support Vector Regression(SVR) giving the best results. 
+    
+     <br><br>
+     </li>
+     <li><u>Fine-tuning:</u><br>
+     The self-supervised learned model is then further fine-tuned on 1 HCS, following the same approach of predicting using 1- nearby LCS. This 
+     calibrates the predictions of the model, providing reliable estimates of PM2.5. Testing the model on remaining HCS, shows that R2 scores upto 0.7 are obtained,
+     while providing Reliable estimates of PM2.5 at any point in the sensor network.
+     </li>
+     </ol>
+
+  
+
+    </p>
   </div>
 </BaseLayout>

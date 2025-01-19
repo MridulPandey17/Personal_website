@@ -1,14 +1,117 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
 ---
-
-<BaseLayout title="ASR Indic Report">
+<style>
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+  }
+  table, th, td {
+    border: 1px solid #ddd;
+  }
+  th, td {
+    text-align: center;
+    padding: 10px;
+  }
+  th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+  }
+  tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+</style>
+<BaseLayout title="Low Cost PM2.5 Sensor Network Calibration">
   <div class="project-report">
-    <h1>Automated Speech Recognition for Indic Language</h1>
+    <div style="text-align: center;">
+      <h1><b>Low Cost PM2.5 Sensor Network Calibration</b></h1>
+      <a href="https://home.iitk.ac.in/~snt/naf/index.html" style="text-decoration: underline;">
+        <h2>National Aerosol Facility</h2>
+      </a>
+    </div>
+    <h2><u>Professor in charge:</u> Prof. Vipul Arora, Prof. S. N. Tripathi<br>
+      <u>Timeline:</u> January 2024-January 2025
+    </h2>
+    <br>
     <p>
-      Project description and detailed report goes here.
+      <h2><b>Brief Description</b></h2>
+      The project aimed at predicting the failure in Low Cost PM2.5 sensors (LCS), up to 7 days in advance to help manage the sensor repair process better. 
+      The project used Deep Time Series models to predict any upcoming failure in the LCS, by analysis of the past and current sensor readings, giving out failure probability in future.  
+
+      <br>
+      <h2><b>Technical Details</b></h2>
+      The dataset contained PM2.5 time series data for 166 LCS for 1 year. Each of these sensors fails at least once during this timeline. 
+      The problem was modeled as time series forecasting, predicting whether a sensor is going to fail within the next 7 days given the PM2.5 reading of the past week. 
+      The implementation of the above approach was carried out using several Deep Time Series Models like Wavenet, GRU, LSTM, and Seq2Seq. 
+      Below is the F1-score table showing the performance of each model across days.
+      
+      <br><br>
+      <table>
+        <thead>
+          <tr>
+            <th>Day</th>
+            <th>GRU</th>
+            <th>LSTM</th>
+            <th>Seq2Seq</th>
+            <th>Wavenet</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>1.00</td>
+            <td>1.00</td>
+            <td>1.00</td>
+            <td>1.00</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>0.98</td>
+            <td>0.98</td>
+            <td>0.97</td>
+            <td>0.98</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>0.97</td>
+            <td>0.96</td>
+            <td>0.95</td>
+            <td>0.96</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>0.96</td>
+            <td>0.90</td>
+            <td>0.92</td>
+            <td>0.95</td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>0.95</td>
+            <td>0.94</td>
+            <td>0.94</td>
+            <td>0.94</td>
+          </tr>
+          <tr>
+            <td>6</td>
+            <td>0.94</td>
+            <td>0.93</td>
+            <td>0.94</td>
+            <td>0.93</td>
+          </tr>
+          <tr>
+            <td>7</td>
+            <td>0.93</td>
+            <td>0.91</td>
+            <td>0.94</td>
+            <td>0.92</td>
+          </tr>
+        </tbody>
+      </table>
+      
+      <br>
+      The model was generalizable to different brands of sensors and was able to successfully predict sensor failures with high confidence well in advance to better manage the resources. 
     </p>
-    <h2>Contributors</h2>
-    <p>Madhav Labs, IIT Kanpur</p>
   </div>
 </BaseLayout>
